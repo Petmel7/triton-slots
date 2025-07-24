@@ -30,11 +30,21 @@
     }
 
     .header__menu-list {
+        box-sizing: border-box;
         height: 0;
         overflow: hidden;
         transition: height 0.4s ease, padding 0.4s ease;
-        padding: 0;
+        padding: 0 20px;
         flex-direction: column;
+    }
+
+    .header__menu-list.is-padding {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header__auth {
+        margin-left: 0;
     }
 }
 
@@ -105,5 +115,60 @@
 @media (max-width: 338px) {
     .logo {
         width: 130px;
+    }
+}
+
+/* sidebar */
+@media (max-width: 1025px) {
+    .main {
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar {
+        border-radius: 8px;
+        height: auto;
+        margin: 20px auto 0;
+        width: calc(100% - 40px);
+        padding: 0;
+        position: static;
+    }
+
+    .sidebar__menu {
+        display: none;
+    }
+
+    .sidebar__nav-button {
+        margin-bottom: 0;
+    }
+
+    .sidebar__links.is-open .sidebar__links-list {
+        padding: 10px 20px;
+    }
+
+    .sidebar__links.is-open .sidebar__nav-button {
+        margin-bottom: 8px;
+    }
+
+}
+
+/* info */
+@media (min-width: 1230px) {
+    .bet-info__content {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .bet-info__image {
+        max-width: 550px;
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .bet-info__table-wrapper {
+        flex: 1;
     }
 }
