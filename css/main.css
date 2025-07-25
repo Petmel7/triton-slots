@@ -33,6 +33,7 @@ a {
 }
 
 .button {
+    text-align: center;
     border-radius: 8px;
     padding: 13px 30px;
     cursor: pointer;
@@ -86,10 +87,6 @@ a {
 .header__menu-list {
     gap: 24px;
 }
-
-/* .header__menu.is-open .header__menu-list {
-    padding: 20px;
-} */
 
 .header__auth {
     gap: 12px;
@@ -208,18 +205,24 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../img/hero-background.png");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
+.background {
+    background-image: url("../img/hero-background.png");
+}
+
+.background1 {
+    background-image: url("../img/background1.png");
+}
+
 .hero__foreground-img {
     position: absolute;
     bottom: 0;
     right: 0;
-    /* max-width: 100%; */
     width: 100%;
     height: auto;
     z-index: 2;
@@ -252,19 +255,45 @@ a {
     line-height: 24px;
 }
 
-.title {
+/* title */
+.content__title {
     font-weight: 800;
-    font-size: 46px;
-    color: #FFF78C;
+    font-size: 30px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.content__image {
     margin-bottom: 16px;
 }
 
-.text {
+/* text */
+.content__subtitle {
+    text-align: center;
     font-weight: 700;
     font-style: 16px;
     margin-bottom: 16px;
 }
 
+.content__text {
+    margin-bottom: 16px;
+}
+
+.content__button-wrapper {
+    text-align: center;
+    margin-top: 32px;
+}
+
+/* hero__title */
+.hero__title {
+    font-weight: 800;
+    font-size: 46px;
+    color: #FFF78C;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+/* hero__text */
 .hero__text {
     max-width: 460px;
     margin: 0 auto 36px;
@@ -282,7 +311,6 @@ a {
     width: 237px;
     position: fixed;
     top: 67px;
-    /* border-radius: 0 10px 10px 0; */
     left: 0;
     height: calc(100vh - 95px);
     overflow-y: auto;
@@ -290,11 +318,6 @@ a {
     margin-top: 17px;
     margin-bottom: 20px;
     padding: 20px;
-    /* background: linear-gradient(to bottom,
-            #2251db 0%,
-            #4671e3 13%,
-            #0c205b 48%); */
-
     background: linear-gradient(179.99deg, rgba(34, 81, 219, 0.13) 0%, rgba(34, 81, 219, 0.48) 33.9%, rgba(34, 81, 219, 0) 102.64%);
 }
 
@@ -320,10 +343,6 @@ a {
     transform: translateY(-50%);
     transition: all 0.2s linear;
 }
-
-/* .sidebar__links .is-open .sidebar__links-list {
-    padding: 10px 20px;
-} */
 
 .sidebar__links-list {
     height: 0;
@@ -401,13 +420,6 @@ a {
     margin-bottom: 20px;
 }
 
-.bet-info__title {
-    font-weight: 800;
-    font-size: 30px;
-    margin-bottom: 16px;
-    text-align: center;
-}
-
 .bet-info__image {
     margin-bottom: 16px;
 }
@@ -442,7 +454,6 @@ a {
 .bet-info__block {
     display: flex;
     flex-wrap: wrap;
-    /* дозволяє переносити */
     justify-content: center;
     gap: 16px;
 }
@@ -457,9 +468,8 @@ a {
     border-radius: 12px;
     text-align: center;
 
-    width: 200px;
-    /* фіксована ширина для однаковості */
-    min-height: 160px;
+    width: 275px;
+    min-height: 142px;
     flex-shrink: 0;
 }
 
@@ -467,4 +477,70 @@ a {
     width: 48px;
     height: 48px;
     margin-bottom: 12px;
+}
+
+.content__list {
+    margin-bottom: 16px;
+}
+
+.content__list li {
+    position: relative;
+    padding-left: 10px;
+}
+
+.content__list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+}
+
+.content_ol {
+    margin-bottom: 16px;
+}
+
+article ol>li {
+    counter-increment: ol;
+    position: relative;
+    padding-left: 25px;
+}
+
+article ol>li::before {
+    content: counter(ol) ".";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+}
+
+/* rating */
+.rating {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.rating__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #FFFFFF00, #FFFFFF33);
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.rating__label {
+    flex: 1;
+}
+
+.rating__stars {
+    display: flex;
+    gap: 4px;
+}
+
+.rating__value {
+    font-weight: 500;
+}
+
+.rating__block {
+    width: 100%;
 }

@@ -172,3 +172,10 @@
         flex: 1;
     }
 }
+
+/* rating */
+@media (max-width: 767px) {
+    .rating {
+        flex-direction: column;
+    }
+}
