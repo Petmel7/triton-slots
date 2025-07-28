@@ -1,3 +1,4 @@
+
 const scrollBtn = document.querySelector('.js-scroll-up');
 
 window.addEventListener('scroll', () => {
@@ -7,3 +8,13 @@ window.addEventListener('scroll', () => {
         scrollBtn.classList.remove('up--visible');
     }
 });
+
+scrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
