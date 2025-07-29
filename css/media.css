@@ -239,6 +239,10 @@
     .rating {
         flex-direction: column;
     }
+
+    .rating__block {
+        margin-right: 0px;
+    }
 }
 
 @media (max-width: 480px) {
